@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="jumbotron text-center mt-4">
+  <hr>
+  <img src="{% static '../static/Tampon-merci-de-votre-confiance-bloomini-studio.jpg' %}">
+  <p class="lead">
+    <br>
+    <a href="{% url 'home' %}">
+      <button type="button" class="btn btn-outline-info">Revenir a l'accueil</button>
+    </a>
+  </p>
+
+</div>
+{% endblock %}

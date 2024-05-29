@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{%block title %}SIGNUP{% endblock %}
+{% block content %}
+{% load static %}
+<fieldset id="bg" style="background-image: url('{% static '../static/Background.jpg' %}')";>
+  <br>
+<center><div class="container">
+  <div class="jumbotron mt-3">
+<form method="POST">
+  {% csrf_token %}
+  <fieldset>
+    <legend>Modifier l'article</legend>
+    <div class="box">
+      <label class="form-label mt-4"><b>Type</b></label>
+      <input type="text" class="form-control"  name="username" placeholder="Nom">
+    </div>
+    <div class="box">
+      <label  class="form-label mt-4"><b>Date entrée</b></label>
+      <input type="date" class="form-control" name="email"  placeholder="Date entrée">
+    </div>
+    <div class="box">
+      <label  class="form-label mt-4"><b>Quantité entrée</b></label>
+      <input type="number" class="form-control" name="email"  placeholder="Quantité entrée">
+    </div>
+    <br>
+    <div class="box">
+      <label  class="form-label mt-4"><b>Date Sortie</b></label>
+      <input type="date" class="form-control" name="password" placeholder="Date Sortie">
+    </div>
+    <div class="box">
+      <label  class="form-label mt-4"><b>Quantitée Sortie</b></label>
+      <input type="number" class="form-control" name="password" placeholder="Quantitée Sortie">
+    </div>
+ <div class="box">
+      <label  class="form-label mt-4"><b>Stock Initial</b></label>
+      <input type="number" class="form-control" name="password" placeholder="Stock Initial">
+    </div>
+    <div class="box">
+      <label  class="form-label mt-4"><b>Stock Reel</b></label>
+      <input type="number" class="form-control" name="password" placeholder="Stock Reel">
+    </div>
+    <div class="box">
+      <label  class="form-label mt-4"><b>Stock Provisionnel</b></label>
+      <input type="number" class="form-control" name="password" placeholder="Stock Provisionnel">
+    </div>
+<div class="box">
+      <label  class="form-label mt-4"><b>Prix</b></label>
+      <input type="price" class="form-control" name="password" placeholder="Prix">
+    </div>
+    <div class="box">
+      <label  class="form-label mt-4"><b>User</b></label>
+      <input type="text" class="form-control" name="password" placeholder="User">
+    </div>
+    <div class="box">
+      <label  class="form-label mt-4"><b>Observation</b></label>
+      <input type="text" class="form-control" name="password" placeholder="Observaton">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+    <button type="submit" class="btn btn-primary">Annuler</button>
+
+    <br>
+  </fieldset>
+</form>
+</div>
+</div>
+</div>
+</center>
+<style>
+
+</style>
+{% endblock %}

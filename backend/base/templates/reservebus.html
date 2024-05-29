@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><center>
+<div class="card text-white bg-primary mb-3" style="max-width: 28rem;">
+  <div class="card-header"><h2>Votre Reservation</h2></div>
+  <div class="card-body" style="text-align:left">
+
+    <h4 class="card-title"><font color=black><b>NOM</b></font> : {{ user.username }}</h4>
+      <h4 class="card-title"><font color=black><b>TYPE</b></font> : {{ toner.type }}</h4>
+      <h4 class="card-title"><font color=black><b>DATE D'ENTREE </b></font>: {{ toner.date_entree }}</h4>
+      <h4 class="card-title"><font color=black><b>QUANTITE ENTREE </b></font>: {{ toner.quantite_entree }}</h4>
+      <h4 class="card-title"><font color=black><b>DATE DE SORTIE </b></font>: {{ toner.date_sortie }}</h4>
+      <h4 class="card-title"><font color=black><b>QUANTITE SORTIE </b></font>: {{ toner.quantite_sortie }}</h4>
+      <h4 class="card-title"><font color=black><b>STOCK INITIAL </b></font>: {{ toner.stock_initial }}</h4>
+    <h4 class="card-title"><font color=black><b>STOCK REEL </b></font>: {{ toner.stock_reel }}</h4>
+    <h4 class="card-title"><font color=black><b>STOCK PROVISIONNEL </b></font>: {{ toner.stock_provisionnel }}</h4>
+    <h4 class="card-title"><font color=black><b>PRIX </b></font>: {{ toner.prix }}</h4>
+    <h4 class="card-title"><font color=black><b>USER </b></font>: {{ toner.user }}</h4>
+     <h4 class="card-title"><font color=black><b>OBSERVATION </b></font>: {{ toner.observation }}</h4>
+  </div>
+    </div>
+   <a href="{% url 'home' %}"><button type="submit" class="btn btn-outline-success">Confirmer</button>
+
+    <a href="{% url 'home' %}"><button type="button" class="btn btn-outline-danger">Annuler </button></a>
+
+{% endblock %}

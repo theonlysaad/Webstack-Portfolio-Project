@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>SIGNUP</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://bootswatch.com/5/simplex/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+{% load static %}
+    <center>
+<form method="POST">
+  {% csrf_token %}
+<br><br><br><br>
+  <legend><b><u>Connexion</u></b></legend>
+  <fieldset id="bg" style="background-image: url('{% static '../static/img.png' %}')";>
+<div>
+  <br><br>
+    <div class="form-group">
+  <div class="form-floating mb-3">
+
+    <input name="username" type="text" class="form-control"  placeholder="username">
+    <label >Username</label>
+  </div>
+      <br>
+  <div class="form-floating">
+    <input type="password" name="password" class="form-control"  placeholder="Password">
+    <label>Password</label>
+  </div>
+
+</div>
+<br>
+  <button type="submit" class="btn btn-primary">Se connecter</button>
+</center>
+</form>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+
+
+<style>
+
+
+fieldset {
+ padding:0 20px 20px 20px;
+ margin-bottom:10px;
+ border:20px solid gray;
+ }
+
+  .form-group {
+    width: 50%;
+  }
+  label.inline {
+ display:inline;
+ margin-right:50px;
+ }
+  label {
+ margin-top:10px;
+ display:block;
+ }
+ #bg{
+    background-size: 600px 300px;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding:10px 20px 20px 20px;
+    margin-bottom:10px;
+    width: 60%;
+    border:55xp solid #DF3F3F;
+}
+  </style>
+</body>
+</html>

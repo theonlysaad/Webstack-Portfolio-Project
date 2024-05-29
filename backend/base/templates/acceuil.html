@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<fieldset id="bg" style="background-image: url('{% static '../static/Background.jpg' %}')";>
+  <br>
+<center><h1><b>Gestion de stock !!</b></h1></center>
+
+
+    <br><br>
+  <h2><u><b>ETAT DE TONER :</b></u></h2>
+  <br>
+<table class="table table-hover">
+  <thead>
+    <tr class="table-dark">
+
+      <th scope="row">Type</th>
+      <th scope="row">Date entrée</th>
+      <th scope="row">Quantité entrée</th>
+      <th scope="row">Date sortie</th>
+      <th scope="row">Quantité sortie</th>
+      <th scope="row">Stock initial</th>
+      <th scope="row">Stock réel</th>
+      <th scope="row">stock prevosionnel</th>
+      <th scope="row">Prix</th>
+      <th scope="row">User</th>
+      <th scope="row">Observation</th>
+      <th scope="row"><center>Operation</center></th>
+
+
+</thead>
+    </tr>
+
+      {% for Toner in Toners %}
+      <tr class="table-secondary">
+      <td><center>{{ Toner.type }}</center></td>
+      <td><center>{{ Toner.date_entree }}</td>
+      <td><center>{{ Toner.quantite_entree }}</td>
+      <td><center>{{ Toner.date_sortie }}</td>
+      <td><center>{{ Toner.quantite_sortie }}</td>
+      <td><center>{{ Toner.stock_initial }}</td>
+      <td><center>{{ Toner.stock_reel }}</td>
+      <td><center>{{ Toner.stock_provisionnel }}</td>
+      <td><center>{{ Toner.prix }}</td>
+      <td><center>{{ Toner.user }}</td>
+      <td><center>{{ Toner.observation }}</td>
+         <td><center><a href="#">Modifier||<a href="#">Supprimer</td>
+      </tr>
+      {% endfor %}
+
+
+</table>
+</div>
+  <style>
+  #bg{
+    background-size: 100% 100%;
+}
+  </style>
+{% endblock %}
